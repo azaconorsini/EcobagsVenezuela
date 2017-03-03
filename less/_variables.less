@@ -1,0 +1,138 @@
+//===========================================================
+//VARIABLES
+//===========================================================
+//Desarrollo web: Johan J. Azacon O.
+//Website: https://jgproducciones.com.ve
+//Email: j.azacon@gmail.com - j.azacon@jgproducciones.com.ve
+//Teléfono: (+58) 04128605556
+
+//============================================================
+//COLORES PRINCIPALES
+//============================================================
+
+//Colores básicos
+//===============
+@color-ecogreen:          #0B9444;
+@color-ecoyellow:         #E19327; //#FED136
+@color-ecolightblue:      #00C1CF;
+
+//Colores grises
+//==============
+@color-gray-base:         #000;
+@color-gray-dark:         lighten(@color-gray-base, 20%);   // #333
+@color-gray-darken:       lighten(@color-gray-base, 13.5%); // #222
+@color-gray:              lighten(@color-gray-base, 33.5%); // #555
+@color-gray-light:        lighten(@color-gray-base, 46.7%); // #777
+@color-gray-lighten:      lighten(@color-gray-base, 93.5%); // #EEE
+
+//Colores de fondo
+//================
+@bg-ecogreen:             @color-ecogreen;
+@bg-ecoyellow:            @color-ecoyellow;
+@bg-ecolightblue:         @color-ecolightblue;
+@bg-gray-lighten:         @color-gray-lighten;
+@bg-gray-darken:          @color-gray-darken;
+
+//Colores para enlaces
+//====================
+@link-base:               @color-gray-dark;
+@link-base-hover:         @color-ecogreen;
+@link-inverse:            @color-ecogreen;
+@link-inverse-hover:      @color-gray-dark;
+
+//===========================================================
+//TIPOGRAFIAS 
+//===========================================================
+
+//Fuentes principales
+//===================
+@font-family-sans-serif: 'Titillium Web', Tahoma, sans-serif;
+@font-family-merry:       'Merriweather', sans-serif;
+@font-family-serif:       Georgia, "Times New Roman", Times, serif;
+@font-family-monospace:   Menlo, Monaco, Consolas, "Courier New", monospace;
+@font-family-base:        @font-family-sans-serif;
+
+//Tamaño de fuentes
+//=================
+@font-size-base:          14px;
+@font-size-small:         ceil((@font-size-base*0.85)); // ~12px
+@font-size-meddium:       ceil((@font-size-base*1.12)); // ~16px
+@font-size-large:         ceil((@font-size-base*1.25)); // ~18px          
+
+//Tamaño para encabezados
+//=======================
+@font-size-h1:            floor((@font-size-base*2.6));  // ~36px
+@font-size-h2:            floor((@font-size-base*2.15)); // ~30px
+@font-size-h3:            ceil((@font-size-base*1.7));   // ~24px
+@font-size-h4:            @font-size-large;              // ~18px
+@font-size-h5:            @font-size-base;               // ~14px
+@font-size-h6:            @font-size-small;              // ~12px
+
+//Line heght
+//==========
+@line-height-base:        1.428571429; // 20/14
+@line-height-computed:    floor((@font-size-base*@line-height-base)); // ~20px
+
+//Grosor de fuentes
+//=================
+@font-weight-extralight:  200;
+@font-weight-light:       300;
+@font-weight-regular:     400;
+@font-weight-bold:        700;
+@font-weight-extrabold:   900;
+
+//===========================================================
+//MEDIA QUERY
+//===========================================================
+@screen-xs:               480px;
+@screen-sm:               768px;
+@screen-md:               992px;
+@screen-lg:               1200px;
+
+@screen-xs-max:           (@screen-xs + 1);
+@screen-sm-max:           (@screen-sm + 1);
+@screen-md-max:           (@screen-md + 1);
+@screen-lg-max:           (@screen-lg + 1);
+
+@screen-xs-min:           (@screen-xs - 1);
+@screen-sm-min:           (@screen-sm - 1);
+@screen-md-min:           (@screen-md - 1);
+@screen-lg-min:           (@screen-lg - 1);
+
+//===========================================================
+//COMPONENTES
+//===========================================================
+
+//Variables de control
+//====================
+@full-width:               100%;
+@full-height:              100%;		
+
+//Directorio
+//==========
+@images-path:               "../images";
+@css-path:                  "../css";
+@icon-path:                 "..fonts";
+
+//Bordes redondeados
+@border-radus-small:        2px;
+@border-radius-base:        4px;
+@border-radius-large:       6px;
+
+//Relleno
+@padding-base-vertical:     6px;
+@padding-base-horizontal:   12px;
+
+@padding-large-vertical:    10px;
+@padding-large-horizontal:  16px;
+
+@padding-small-vertical:    5px;
+@padding-small-horizontal:  10px;
+
+@padding-xs-vertical:       1px;
+@padding-xs-horizontal:     5px;
+
+@webkit: true;
+@moz: true;
+@ms: false;
+@o: false;

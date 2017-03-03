@@ -1,0 +1,132 @@
+//==========================================================
+//MIXINS
+//==========================================================
+//Desarrollo web: Johan J. Azacon O.
+//Website: https://jgproducciones.com.ve
+//Email: j.azacon@gmail.com - j.azacon@jgproducciones.com.ve
+//Teléfono: (+58) 04128605556
+.prefixed(@property, @value) {
+  & when (@webkit = true) {
+    -webkit-@{property}: @value;
+  }
+  & when (@moz = true) {
+      -moz-@{property}: @value;
+  }
+  & when (@ms = true) {
+      -ms-@{property}: @value;
+  }
+  & when (@o = true) {
+      -o-@{property}: @value;
+  }
+  @{property}: @value;
+}
+.hardwareAccel() {
+  .prefixed(transform, translateZ(0));
+}
+
+.improveAntiAlias() {
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+}
+.fontSmooth() {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+.forceBlockLevel() {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.hacks() {
+  .forceBlockLevel();
+  .hardwareAccel();
+  .fontSmooth();
+  //.improveAntiAlias();
+}
+//Opaciidad de elementos
+.opacity(@opacity) {
+  opacity: @opacity/100;
+  filter: "alpha(opacity=@{opacity});"
+}
+
+//Border redondeados
+.border-radius-default(@radius) {
+  -webkit-border-radius: @radius;
+     -moz-border-radius: @radius;
+      -ms-border-radius: @radius;
+       -o-border-radius: @radius;
+          border-radius: @radius;
+}
+.border-radius-custom(@top-left @top-right @bottom-left @bottom-right) {
+  -webkit-border-radius: @top-left @top-right @bottom-left @bottom-right;
+     -moz-border-radius: @top-left @top-right @bottom-left @bottom-right;
+      -ms-border-radius: @top-left @top-right @bottom-left @bottom-right;
+       -o-border-radius: @top-left @top-right @bottom-left @bottom-right;
+          border-radius: @top-left @top-right @bottom-left @bottom-right;
+}
+
+//Cajas con sombra 
+.box-shadow-custom(@x @y @blur @alpha) {
+  -webkit-box-shadow: @x @y @blur @alpha;
+     -moz-box-shadow: @w @y @blur @alpha;
+      -ms-box-shadow: @x @y @blur @alpha;
+       -o-box-shadow: @x @y @blur @alpha;
+          box-shadow: @x @y @blur @alpha
+}
+
+//Degradado
+.gradient-custom(@origin, @start, @stop) {
+  background-color: @star;
+  background-image: -webkit-linear-gradient(@origin, @start, @stop);
+  background-image:    -moz-linear-gradient(@origin, @start, @stop);
+  background-image:     -ms-linear-gradient(@origin, @start, @stop);
+  background-image:      -o-linear-gradient(@origin, @start, @stop);
+  background-image:         linear-gradient(@origin, @statr, @stop);
+}
+
+//Transiciones
+.transition-default(@transition: all .35s linear) {
+  -webkit-transition: @transition;
+     -moz-transition: @transition;
+      -ms-transition: @transition;
+       -o-transition: @transition;
+          transition: @transition;
+}
+.transition-custom(@property @duration @timing-function) {
+  -webkit-transition: @property @duration @timing-function;
+     -moz-transition: @property @duration @timing-function;
+      -ms-transition: @property @duration @timing-function;
+       -o-transition: @property @duration @timing-function;
+          transition: @property @duration @timing-function;
+}
+
+//Configuración general para botones
+.button-variant(@color, @background-color, @border-color) {
+  color: @color;
+  background-color: @background-color;
+  border-color: darken(@border-color, 5%);
+  font-weight: 700;
+  &:hover,
+  &:focus,
+  &:active {
+    color: @color;
+    &:before {
+      .prefixed(transform, scaleX(1));
+    }
+  }
+}
+
+//Estilos para el bordes 
+.border-default(@border-width @border-style @border-color) {
+  border: @border-width @border-style @border-color;
+}
+
+//Propiedades de fondo 
+.background-property(@size, @position) {
+  background-position: @position;
+  -webkit-background-size: @size;
+     -moz-background-size: @size;
+      -ms-background-size: @size;
+       -o-background-size: @size;
+          background-size: @size;
+}
