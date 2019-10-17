@@ -1,15 +1,18 @@
-# Ecobags Venezuela - Construyendo ideas ecológicas
+# **Ecobags Venezuela**
 
-Ecobags Venezuela es un proyecto inspirado para promover la cultura conservacionista tanto a nivel nacional como internacional. Esta pequeña empresa con propuestas ecológicas impulsa productos a través de la venta de bolsas diseñadas y elaboradas en material reciclable.
+**Ecobags Venezuela** es un proyecto inspirado para promover la cultura conservacionista tanto a nivel nacional como internacional. Esta pequeña empresa con propuestas ecológicas impulsa sus productos a través de la venta de bolsas diseñadas y elaboradas en material reciclable.
 
-Este proyecto esta desarrollado bajo los estándares la tecnologías web HTML5, usando framework de maquetación Bootstrap y reglas de estilos CSS3, pre-procesadores de estilos LESS, desarrollo de formulario de contacto en PHP y librerías JavaScript.
+## **Tecnología web**
 
--Autor: Johan J. Azacon O.
+Este proyecto esta desarrollado bajo los estándares la tecnologías web como:
 
--WebSite: http://azaconorsini.com.ve
+- HTML5.
+- CSS3 y pre-procesadores de estilos LESS.
+- Bootstrap framework.
+- Formulario de contacto en PHP.
+- librerías JavaScript.
 
--CEO: http://jgproducciones.com.ve
+### **Johan J. Azacon O.**
+**Email:** j.azacon@gmail.com
 
--Contacto: j.azacon@gmail.com - info@azaconorsini.com.ve
-
--Teléfono: (+58) 412.8605556
+![COVER](https://mir-s3-cdn-cf.behance.net/project_modules/1400_opt_1/9c1e5153593057.59399c90bb527.png)
